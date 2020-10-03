@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 #include "custom256sha.h"
-#define N 3 //change this value if u wanna change the number of blocks in chain
+
+
 using namespace std;
 bool gencheck(int in)
 {
@@ -39,7 +40,9 @@ void generatechain(block * chain)
 	}
 }
 int main(int argc, char* argv[])
-{	
+{
+	int N;
+	cin>>N;
 	cout<<"Blocks to be generated: "<<N<<endl;
 	block * chain = new block [N];
 	for(int i = 0;i<N;i++)
